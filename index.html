@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Yew App</title>
+    <link rel="modulepreload" href="/coconut/coconut-8d8b959acdbe4603.js" crossorigin="anonymous" integrity="sha384-9EQIf1AeUFLpQ6Pkh2iYty+3jgrdyvakDUZ8wD977BvB/X7EYbwr6cNQq47yVAEx"><link rel="preload" href="/coconut/coconut-8d8b959acdbe4603_bg.wasm" crossorigin="anonymous" integrity="sha384-RAau26nN6l3PhhEgnzCD54ifzwhyORBnx2A+kfH42cChDWgAL+e8k5jVyV1JJY9D" as="fetch" type="application/wasm"></head>
+    <body>
+<script type="module">
+import init, * as bindings from '/coconut/coconut-8d8b959acdbe4603.js';
+const wasm = await init({ module_or_path: '/coconut/coconut-8d8b959acdbe4603_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
